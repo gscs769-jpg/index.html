@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Brawl Stars Tanıtım Sitesi</title>
+
+<style>
+  /* GENEL STİL */
+  body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #ffb300;
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 20px 10px;
+  }
+
+  .box {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  button, .btn {
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffb300;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  button:hover, .btn:hover {
+    background-color: #ffaa00;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  .characters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .character {
+    width: 150px;
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  hr {
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid #ffb300;
+  }
+</style>
+</head>
+
+<body>
+
+<header>BRAWL STARS</header>
+
+<div class="container">
+
+  <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Brawl_Stars_logo.png" alt="Brawl Stars Logo">
+
+  <div class="box">
+    <h2>Oyun Hakkında</h2>
+    <p>Brawl Stars, Supercell tarafından geliştirilen aksiyon dolu bir mobil oyundur.</p>
+  </div>
+
+  <div class="box">
+    <h2>Özellikler</h2>
+    <ul>
+      <li>✔️ Çok oyunculu</li>
+      <li>✔️ Farklı karakterler</li>
+      <li>✔️ Eğlenceli haritalar</li>
+      <li>✔️ Günlük ödüller</li>
+    </ul>
+  </div>
+
+  <button onclick="alert('Brawl Stars çok eğlenceli!')">Oyunu Keşfet</button>
+
+  <hr>
+
+  <div class="box">
+    <h2>Karakterler</h2>
+    <div class="characters">
+      <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7c/Shelly_Skin-Default.png" class="character" alt="Shelly">
+      <img src="https://static.wikia.nocookie.net/brawlstars/images/0/0f/Colt_Skin-Default.png" class="character" alt="Colt">
+      <img src="https://static.wikia.nocookie.net/brawlstars/images/8/85/Bull_Skin-Default.png" class="character" alt="Bull">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="box">
+    <h2>Daha Fazla Bilgi</h2>
+    <p>Oynamak ücretsiz, fakat oyun içi ekipman satın alımları mevcut. Oyunda seviye atlamak için kupa ve madeni para toplamak önemlidir.</p>
+  </div>
+
+  <a href="https://store.supercell.com" target="_blank">
+    <button class="btn">Supercell Mağaza</button>
+  </a>
+
+</div>
+
+</body>
+</html><hr>
+
+<div class="box">
+  <h2>Oyuncu Kupa Sorgulama (Demo)</h2>
+  <input type="text" id="playerTag" placeholder="Brawl Stars ID gir">
+  <button onclick="getPlayer()">Sorgula</button>
+  <p id="playerResult"></p>
+</div>
+
+<script>
+  function getPlayer() {
+    const tag = document.getElementById("playerTag").value.trim();
+
+    if(tag === "") {
+      document.getElementById("playerResult").innerHTML = "Lütfen bir ID girin!";
+      return;
+    }
+
+    // Demo veri
+    const trophies = Math.floor(Math.random() * 30000) + 1000; // 1000-31000 arası rastgele kupa
+    const ranks = ["Bronz I","Bronz II","Gümüş I","Altın II","Elmas III","Star III","Legend IV"];
+    const rank = ranks[Math.floor(Math.random() * ranks.length)];
+
+    document.getElementById("playerResult").innerHTML = `
+      <b>Oyuncu:</b> ${tag} <br>
+      <b>Mevcut Kupa:</b> ${trophies} <br>
+      <b>Rütbe:</b> ${rank}
+    `;
+  }
+        </script>
