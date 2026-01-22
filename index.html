@@ -2,159 +2,89 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<title>Küçük Bir Hediye 🌹</title>
 
 <style>
-*{
-  background-color: #121212 !important;
-  color: white !important;
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* PEMBE + KIRMIZI ARKA PLAN */
+    background: linear-gradient(135deg, #ff004c, #ff4d88, #ff99cc);
+
+    font-family: Arial, sans-serif;
+    overflow:hidden;
+}
+
+/* Buton */
+button{
+    padding:22px 45px;
+    font-size:24px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#ff004c;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 30px rgba(0,0,0,0.35);
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.12);
+}
+
+/* Uçan kalp + gül */
+.item{
+    position:absolute;
+    font-size:26px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(0); opacity:1;}
+    to{transform:translateY(-110vh); opacity:0;}
 }
 </style>
-
-</head>
-<body> <style>
-body{
-  background-color: #121212; /* koyu arka plan */
-  color: white;              /* yazılar beyaz */
-}
-</style><!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <title>Oyun Tanıtımı</title>
-
-  <style>
-    body{
-      margin:0;
-      font-family: Arial;
-      background:#121212;
-      color:white;
-      text-align:center;
-    }
-
-    header{
-      background:#ffb300;
-      padding:20px;
-      font-size:28px;
-      font-weight:bold;
-      color:black;
-    }
-
-    .container{
-      padding:20px;
-    }
-
-    img{
-      width:250px;
-      border-radius:20px;
-      margin:20px 0;
-    }
-
-    .box{
-      background:#1f1f1f;
-      padding:15px;
-      border-radius:15px;
-      margin:15px auto;
-      max-width:400px;
-    }
-
-    button{
-      font-size:18px;
-      padding:15px 30px;
-      border:none;
-      border-radius:15px;
-      background:#ffb300;
-      cursor:pointer;
-    }
-  </style>
 </head>
 
 <body>
 
-<header>Brawl Stars</header>
+<button onclick="ac()">Drewan Ağa Bas ❤️</button>
 
-<div class="container">
+<script>
+function ac(){
+    document.body.innerHTML = `
+    <h1 style="
+        color:white;
+        font-size:50px;
+        text-align:center;
+        padding:20px;
+        text-shadow:0 0 15px rgba(0,0,0,0.4);">
+        💖 Daima mutlu olun 💖<br><br>
+        Drewan & İrem
+    </h1>`;
+}
 
-  <img src="https://upload.wikimedia.org/wikipedia/en/6/63/Brawl_Stars_logo.png">
+/* Kalp + gül efekti */
+setInterval(()=>{
+    const item=document.createElement("div");
+    item.className="item";
 
-  <div class="box">
-    <h2>Oyun Hakkında</h2>
-    <p>Brawl Stars, Supercell tarafından geliştirilen
-    aksiyon dolu bir mobil oyundur.</p>
-  </div>
+    const semboller=["❤️","🌹"];
+    item.innerHTML=semboller[Math.floor(Math.random()*semboller.length)];
 
-  <div class="box">
-    <h2>Özellikler</h2>
-    <p>✔️ Çok oyunculu<br>
-       ✔️ Farklı karakterler<br>
-       ✔️ Eğlenceli haritalar</p>
-  </div>
+    item.style.left=Math.random()*100+"vw";
+    item.style.top="100vh";
 
-  <button onclick="alert('Brawl Stars çok eğlenceli!')">
-    Oyunu Keşfet
-  </button>
+    document.body.appendChild(item);
 
-</div>
+    setTimeout(()=>item.remove(),6000);
+},250);
+</script>
 
 </body>
-</html><div class="box">
-  <h3>Brawl Stars</h3>
-  <p>Eğlenceli ve rekabetçi bir mobil oyun.</p>
-</div>
-
-<style>
-.box{
-  background:white;
-  padding:15px;
-  margin:20px;
-  border-radius:10px;
-}
-</style><!DOCTYPE html>
-<html>
-    <head>
-        <title>Page Title</title>
-    </head>
-    <body>
-        
-    </body>
 </html>
-<h1>BRAWL STARS</h1>
-<p>Oyunu oynamak ücretsiz ama oyunda seviye atlamak değil
-Çevrimiçi oyunlar sadece eğlenceli vakit sunmakla kalmaz aynı zamanda çocukların becerilerini de geliştirebilir, onların sosyalleşmesini ve birbirleriyle iletişim kurmalarını sağlayabilir, ayrıca yaratıcılıklarını da geliştirebilir. Her durumda, Brawl Stars da dahil çevrimiçi oyunlarla ilişkili birçok zorluk da bulunuyor. Bu çizgi film benzeri gerçek zamanlı strateji oyunu, genç oyunculara tam anlamıyla hitap ediyor. Oyunun kendisi ücretsiz olarak indirilebilirken uygulama içi satın alma yoluyla ek ekipman satın alınabiliyor. Durum böyle olunca, ebeveynler zaman zaman kredi kartlarında beklenmeyen harcamalarla karşılaşabiliyor. Çocuklar oyunlarda neden ekstra özellikler satın alıyor? Bunun nedeni oyunda bir üst seviyeye ilerlemek amacıyla yeteri kadar kupa, madeni para ve mücevher elde etmek istemeleridir. Gerçek para ile bunun için gerekli olan eşyaları satın alarak bu süreci hızlandırabilirler</p>
-<hr>
-<img src =https://share.google/nymt61cYfoUnS5bfd>
-<button onclick ="alert('Brawl starsçiyiz')"&></button>
-<button style ="padding:15px 30px font-size:20px":>
- tıkla 
- </button>
-<img src="https://static.wikia.nocookie.net/brawlstars/images/7/7c/Shelly_Skin-Default.png" class="shelly"><style>
-.shelly {
-  width: 250px;
-  display: block;
-  margin: 20px auto;
-}
-</style>
-<a href="https://store.supercell.com" target="_blank">
-  <button class="btn">Supercell Mağaza</button>
-</a>
-
-<style>
-.btn{
-  font-size: 20px;
-  padding: 15px 30px;
-  background: orange;
-  border: none;
-  border-radius: 12px;
-}
-</style><style>
-body{
-  background:#f2f2f2;
-  text-align:center;
-  font-family: Arial;
-}
-</style><hr style="width:200px; margin:auto;">
-<style>
-body{
-  background-color: white;
-  color: black;
-}
-</style>
